@@ -21,7 +21,6 @@ export default class extends Command<typeof feedCommand> {
     const database = await user.findOne({ userID, guildID });
     const itemType = args.itemname as FoodType;
 
-    // ❌ No pet
     if (!database?.pet?.petName) {
       await interaction.reply(
         i18next.t("command.utility.pet.error.no_pet", {
@@ -30,8 +29,6 @@ export default class extends Command<typeof feedCommand> {
       );
       return;
     }
-
-    // ✅ Get food config
     const food = FOOD_CONFIG[itemType];
 
     if (!food) {
@@ -42,8 +39,6 @@ export default class extends Command<typeof feedCommand> {
       );
       return;
     }
-
-    // ✅ Check inventory
     const inventoryItem = database.pet.inventory.food.find(
       (f) => f.itemName === itemType,
     );
@@ -56,8 +51,6 @@ export default class extends Command<typeof feedCommand> {
       );
       return;
     }
-
-    // ✅ Get personality safely
     const personality = getPersonalityConfig(database.pet);
 
     const hungerGain = Math.floor(food.hunger * personality.hungerMultiplier);
@@ -69,8 +62,7 @@ export default class extends Command<typeof feedCommand> {
     database.pet.hunger = Math.min(database.pet.hunger + hungerGain, 100);
 
     database.pet.health = Math.min(database.pet.health + healthGain, 100);
-
-    // ✅ Remove item
+    
     inventoryItem.quantity -= 1;
 
     await database.save();
