@@ -4,14 +4,14 @@ import { Command } from "@yuudachi/framework";
 import { ArgsParam, InteractionParam } from "@yuudachi/framework/types";
 import i18next from "i18next";
 
-// Progress bar helper
+
 function createBar(value: number, max = 100, size = 10): string {
   const filled = Math.round((value / max) * size);
   const empty = size - filled;
   return "🟩".repeat(filled) + "⬜".repeat(empty);
 }
 
-// Mood emoji based on happiness
+
 function getMoodEmoji(happiness: number): string {
   if (happiness > 80) return "😄";
   if (happiness > 50) return "🙂";
@@ -19,7 +19,7 @@ function getMoodEmoji(happiness: number): string {
   return "😢";
 }
 
-// Pet condition based on health, hunger, happiness
+
 function getPetCondition(pet: {
   health: number;
   hunger: number;
