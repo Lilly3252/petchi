@@ -30,8 +30,7 @@ export default class extends Command<typeof dailyCommand> {
     const lastDaily = database.lastDaily?.getTime() ?? 0;
 
     const timeSinceLast = now - lastDaily;
-
-    // ❌ Still on cooldown
+    
     if (timeSinceLast < DAILY_COOLDOWN) {
       const remaining = DAILY_COOLDOWN - timeSinceLast;
 
@@ -48,7 +47,6 @@ export default class extends Command<typeof dailyCommand> {
       return;
     }
 
-    // ✅ Give reward
     database.coins += DAILY_REWARD;
     database.lastDaily = new Date();
 
