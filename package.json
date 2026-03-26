@@ -1,0 +1,50 @@
+{
+  "name": "petchi",
+  "version": "1.0.0",
+  "description": "a small evolving digital companion",
+  "keywords": [
+    "pet",
+    "companion",
+    "tamagotchi"
+  ],
+  "license": "MIT",
+  "author": "lilly_nosya",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --env-file=.env dist/index.js",
+    "deploy": "node --env-file=.env dist/deploy.js",
+    "lint": "eslint .",
+    "update": "ncu -u",
+    "build": "npx rimraf dist && tsc",
+    "format": "prettier --write .",
+    "watch": "tsc --watch",
+    "prettier:check": "prettier --check .",
+    "type-check": "tsc --noEmit"
+  },
+  "imports": {
+    "#utils/*": "./dist/utils/*",
+    "#slashyInformations/*": "./dist/slashyInformations/*",
+    "#types/*": "./src/utils/types/*",
+    "#database/*": "./dist/database/*",
+    "#subcommands/*": "./dist/subcommands/*"
+  },
+  "dependencies": {
+    "@skyra/i18next-backend": "^2.0.6",
+    "@yuudachi/framework": "^0.3.6",
+    "discord.js": "^14.25.1",
+    "i18next": "^25.10.9",
+    "mongoose": "^9.3.3",
+    "tsyringe": "^4.10.0"
+  },
+  "devDependencies": {
+    "@types/diff": "^7.0.2",
+    "@types/ms": "^2.1.0",
+    "@types/node": "^25.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
+    "@typescript-eslint/parser": "^8.57.2",
+    "eslint": "^10.1.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  }
+}

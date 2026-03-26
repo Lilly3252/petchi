@@ -1,0 +1,103 @@
+import { FoodCategory, FoodType } from "#utils/enums/foodType.js";
+import { FoodItem } from "#utils/types/shopInterfaces.js";
+
+export const FOOD_CONFIG: Record<FoodType, FoodItem> = {
+  [FoodType.PREMIUM_FOOD]: {
+    type: FoodType.PREMIUM_FOOD,
+    category: FoodCategory.SPECIAL,
+    price: 15,
+    health: 15,
+    hunger: 15,
+  },
+  [FoodType.DRY_KIBBLE]: {
+    type: FoodType.DRY_KIBBLE,
+    category: FoodCategory.GENERAL,
+    price: 10,
+    health: 10,
+    hunger: 10,
+  },
+  [FoodType.WET_FOOD]: {
+    type: FoodType.WET_FOOD,
+    category: FoodCategory.GENERAL,
+    price: 12,
+    health: 12,
+    hunger: 12,
+  },
+  [FoodType.TREATS]: {
+    type: FoodType.TREATS,
+    category: FoodCategory.SPECIAL,
+    price: 8,
+    health: 8,
+    hunger: 8,
+  },
+  [FoodType.RAW_MEAT]: {
+    type: FoodType.RAW_MEAT,
+    category: FoodCategory.MEATS,
+    price: 20,
+    health: 20,
+    hunger: 200,
+  },
+  [FoodType.FISH]: {
+    type: FoodType.FISH,
+    category: FoodCategory.MEATS,
+    price: 18,
+    health: 18,
+    hunger: 18,
+  },
+  [FoodType.CHICKEN]: {
+    type: FoodType.CHICKEN,
+    category: FoodCategory.MEATS,
+    price: 16,
+    health: 16,
+    hunger: 16,
+  },
+  [FoodType.BEEF]: {
+    type: FoodType.BEEF,
+    category: FoodCategory.MEATS,
+    price: 22,
+    health: 22,
+    hunger: 22,
+  },
+  [FoodType.LAMB]: {
+    type: FoodType.LAMB,
+    category: FoodCategory.MEATS,
+    price: 24,
+    health: 24,
+    hunger: 24,
+  },
+  [FoodType.TURKEY]: {
+    type: FoodType.TURKEY,
+    category: FoodCategory.MEATS,
+    price: 19,
+    health: 19,
+    hunger: 19,
+  },
+  [FoodType.DUCK]: {
+    type: FoodType.DUCK,
+    category: FoodCategory.MEATS,
+    price: 21,
+    health: 21,
+    hunger: 21,
+  },
+  [FoodType.RABBIT]: {
+    type: FoodType.RABBIT,
+    category: FoodCategory.MEATS,
+    price: 23,
+    health: 23,
+    hunger: 23,
+  },
+  [FoodType.GRAIN_FREE]: {
+    type: FoodType.GRAIN_FREE,
+    category: FoodCategory.SPECIAL,
+    price: 17,
+    health: 17,
+    hunger: 17,
+  },
+  [FoodType.ORGANIC]: {
+    type: FoodType.ORGANIC,
+    category: FoodCategory.SPECIAL,
+    price: 25,
+    health: 25,
+    hunger: 25,
+  },
+};

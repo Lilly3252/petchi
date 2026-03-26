@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "module": "NodeNext",
+    "moduleResolution": "Node16",
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "baseUrl": "./",
+    "strict": true,
+    "paths": {
+      "#utils/*": ["./src/utils/*"],
+      "#slashyInformations/*": ["./src/slashyInformations/*"],
+      "#types/*": ["src/utils/types/*"],
+      "#database/*": ["./src/database/*"],
+      "#subcommands/*": ["./src/subcommands/*"]
+    },
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
