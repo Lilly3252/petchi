@@ -1,5 +1,5 @@
 import process from "node:process";
-import * as command from "#slashyInformations/index.js";
+import * as command from "#slashyInformations/index.js"
 import { Routes } from "discord-api-types/v10";
 import { REST } from "@discordjs/rest";
 
@@ -8,7 +8,17 @@ try {
   console.log("Start refreshing interaction (/) commands.");
   //console.log(command)
   await rest.put(Routes.applicationCommands(process.env.CLIENT_ID!), {
-    body: [],
+    body: [
+      command.adoptCommand,
+      command.battleCommand,
+      command.buyCommand,
+      command.careCommand,
+      command.dailyCommand,
+      command.feedCommand,
+      command.playCommand,
+      command.questCommand,
+      command.trainCommand,
+    ],
   });
 
   console.log("Successfully reloaded interaction (/) commands.");
