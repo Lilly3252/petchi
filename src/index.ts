@@ -57,14 +57,14 @@ const slashyFiles = readdirp(fileURLToPath(new URL("commands", import.meta.url))
 	fileFilter: jsFileFilter
 });
 
-const commands = container.resolve<Map<string, Command>>(kCommands);
+const commands = container.get<Map<string, Command>>(kCommands);
 
 for await (const slashyFile of slashyFiles) {
 	const cmdInfo = commandInfo(slashyFile.path);
 	
 	const dynamic = dynamicImport<new () => Command>(async () => import(pathToFileURL(slashyFile.fullPath).href));
 	//console.log(pathToFileURL(slashyFile.fullPath).pathname)
-	const slashy = container.resolve<Command>((await dynamic()).default);
+	const slashy = container.get<Command>((await dynamic()).default);
 	commands.set(cmdInfo!.name.toLowerCase(), slashy);
 }
 
@@ -74,7 +74,7 @@ const eventFiles = readdirp(fileURLToPath(new URL("events", import.meta.url)), {
 
 for await (const eventFile of eventFiles) {
 	const dynamic = dynamicImport<new () => Event>(async () => import(pathToFileURL(eventFile.fullPath).href));
-	const lillyevent = container.resolve<Event>((await dynamic()).default);
+	const lillyevent = container.get<Event>((await dynamic()).default);
 
 	if (lillyevent.disabled) {
 		continue;
