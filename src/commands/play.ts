@@ -20,7 +20,6 @@ export default class extends Command<typeof playCommand> {
 
   const itemName = args.itemname;
 
-  // ❌ No pet
   if (!database?.pet?.petName) {
     await interaction.reply(
       i18next.t("command.utility.pet.error.no_pet_play", {
@@ -32,7 +31,6 @@ export default class extends Command<typeof playCommand> {
 
   const pet = database.pet;
 
-  // ❌ No toys
   if (!pet.inventory?.toys?.length) {
     await interaction.reply(
       i18next.t("command.utility.pet.error.no_toys", {
@@ -42,7 +40,6 @@ export default class extends Command<typeof playCommand> {
     return;
   }
 
-  // 🔍 Find toy in inventory
   const toy = pet.inventory.toys.find(
     (t) => t.itemName === itemName,
   );
@@ -56,7 +53,6 @@ export default class extends Command<typeof playCommand> {
     return;
   }
 
-  // ✅ Get type safely
   const toyType = toy.type
 
   const config = TOY_CONFIG[toyType];
@@ -66,7 +62,6 @@ export default class extends Command<typeof playCommand> {
     return;
   }
 
-  // 🎮 Apply effects
  const baseFun = config.fun;
 
 const personality = getPersonalityConfig(pet);
