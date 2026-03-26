@@ -7,7 +7,6 @@ import { ArgsParam, InteractionParam } from "@yuudachi/framework/types";
 import i18next from "i18next";
 
 function calculatePower(pet: any): number {
-  // 🔥 scalable formula
   return pet.level * 2 + pet.skills.length * 5 + Math.floor(Math.random() * 10);
 }
 
@@ -64,7 +63,6 @@ export default class extends Command<typeof battleCommand> {
       resultKey = "tie";
     }
 
-    // ✅ Save once
     await Promise.all([database.save(), opponent_database.save()]);
 
     await interaction.reply(
