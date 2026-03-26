@@ -10,7 +10,7 @@
 - 🍎 **Feed & Care** – Feed, play, and take care of your pet’s needs.
 - 🎮 **Mini Games** – Play games to earn coins and rewards for your pet.
 - 📈 **Growth & Levels** – Watch your pet grow and evolve over time.
--(COMMING SOON) 🌐 **Multi-Server Support** – Your pets are tied to you, available across servers.
+- (COMMING SOON) 🌐 **Multi-Server Support** – Your pets are tied to you, available across servers.
 
 ---
 
