@@ -55,7 +55,6 @@ export default class extends Command<typeof trainCommand> {
 
     let messageKey: string;
 
-    // Learn vs Train
     if (!pet.skills.includes(skillName)) {
       pet.skills.push(skillName);
       messageKey = "command.utility.pet.skill_learned";
@@ -63,10 +62,10 @@ export default class extends Command<typeof trainCommand> {
       messageKey = "command.utility.pet.skill_trained";
     }
 
-    // XP gain
+    
     pet.skillXP[skillName] += skillConfig.xpGain;
 
-    // Happiness gain
+   
     pet.happiness = Math.min(pet.happiness + skillConfig.happinessGain, 100);
 
     if (pet.skillXP[skillName] >= 100) {
