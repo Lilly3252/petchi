@@ -1,0 +1,149 @@
+{
+  "pet": {
+    "category": {
+      "bird": "Oiseau",
+      "domestic": "Domestique",
+      "small": "Petit",
+      "water": "Aquatique",
+      "reptiles": "Reptiles"
+    },
+    "type": {
+      "dog": "Chien",
+      "cat": "Chat",
+      "rabbit": "Lapin",
+      "bird": "Oiseau",
+      "fish": "Poisson",
+      "turtle": "Tortue",
+      "guinea_pig": "Cochon d'Inde",
+      "lizard": "Lézard",
+      "snake": "Serpent",
+      "frog": "Grenouille",
+      "parrot": "Perroquet",
+      "ferret": "Furet",
+      "hedgehog": "Hérisson",
+      "chinchilla": "Chinchilla",
+      "hamster": "Hamster"
+    },
+    "personality": {
+      "playful": "Joueur",
+      "lazy": "Paresseux",
+      "aggressive": "Agressif",
+      "friendly": "Amical",
+      "curious": "Curieux",
+      "neutral": "Neutre"
+    },
+    "status": "Nom de l'animal : {{petName}}\nType : {{petType}}\n\n❤️ Santé : {{health}}\n\uD83C\uDF57 Faim : {{hunger}}\n\uD83C\uDF89 Bonheur : {{happiness}}\n\n\uD83D\uDCCA Niveau : {{level}} ({{xp}} XP)\n\n\uD83E\uDDE0 Compétences :\n{{skills}}\n\n\uD83D\uDCCC État : {{condition}}",
+    "personality_reaction": {
+      "playful": "Votre animal est plein d'énergie !",
+      "lazy": "Votre animal n'a pas envie de bouger...",
+      "aggressive": "Votre animal est sur les nerfs !",
+      "friendly": "Votre animal adore passer du temps avec vous",
+      "curious": "Votre animal explore tout"
+    },
+    "error": {
+      "no_pet": "Vous n'avez pas d'animal.",
+      "item_not_found": "Article introuvable dans la boutique.",
+      "user_not_found": "Utilisateur introuvable.",
+      "quest_completed": "Vous avez déjà terminé cette quête.",
+      "skill_known": "Votre animal connaît déjà cette compétence.",
+      "quest_expired": "Cette quête a expiré.",
+      "quest_not_exist": "Cette quête n'existe pas.",
+      "not_enough_coins": "Vous n'avez pas assez de pièces pour acheter cet article.",
+      "provide_both": "Veuillez fournir un nom et un type d'animal.",
+      "invalid_pet_type": "Type d'animal invalide. Veuillez choisir un type d'animal valide.",
+      "already_have_pet": "Vous avez déjà un animal.",
+      "battle_required": "Les deux utilisateurs doivent avoir un animal pour combattre.",
+      "daily_claimed": "Vous avez déjà réclamé votre récompense quotidienne. Veuillez réessayer plus tard.",
+      "no_pet_play": "Vous n'avez pas d'animal avec qui jouer."
+    },
+    "skill_learned": "Votre animal a appris la compétence : {{skill}} !",
+    "item_bought": "Vous avez acheté un(e) {{itemName}}. Cet article a été ajouté à l'inventaire de votre animal.",
+    "adopted_pet": "Vous avez adopté un(e) {{petType}} nommé(e) {{petName}} !",
+    "win": "Votre animal {{userPetName}} a gagné le combat contre {{opponentPetName}} !",
+    "lose": "Votre animal {{userPetName}} a perdu le combat contre {{opponentPetName}}.",
+    "tie": "C'est une égalité entre {{userPetName}} et {{opponentPetName}} !"
+  },
+  "quest": {
+    "completed": "Vous avez terminé la quête : {{questName}} et gagné {{reward}} !",
+    "started": "Vous avez commencé la quête : {{questName}} !",
+    "progress": "Progression : {{progress}} %",
+    "quest_name": {
+      "feed_pet": "Nourrir votre animal",
+      "train_pet": "Entraîner votre animal",
+      "pet_show": "Participer à une exposition d'animaux",
+      "walk_pet": "Promener votre animal",
+      "play_fetch_pet": "Jouer à rapporter avec votre animal",
+      "visit_the_vet": "Visiter le vétérinaire",
+      "teach_pet_trick": "Apprendre un nouveau tour à votre animal",
+      "pet_costume_contest": "Participer à un concours de costumes pour animaux",
+      "pet_spa_day": "Journée au spa pour animaux"
+    },
+    "quest_description": {
+      "feed_pet": "Nourrissez votre animal pour le garder heureux et en bonne santé.",
+      "train_pet": "Passez du temps à entraîner votre animal pour améliorer ses compétences.",
+      "pet_show": "Inscrivez votre animal à une exposition locale et essayez de gagner un prix.",
+      "walk_pet": "Promenez votre animal pour augmenter son bonheur.",
+      "play_fetch_pet": "Passez du temps à jouer à rapporter pour garder votre animal actif.",
+      "visit_the_vet": "Emmenez votre animal chez le vétérinaire pour un examen de routine.",
+      "teach_pet_trick": "Passez du temps à apprendre un nouveau tour à votre animal pour impressionner les autres.",
+      "pet_costume_contest": "Habillez votre animal pour un concours de costumes.",
+      "pet_spa_day": "Emmenez votre animal au spa pour la détente et le toilettage."
+    }
+  },
+  "used_item": "Vous avez utilisé {{itemName}}. La santé est maintenant de {{health}}.",
+  "daily_reward": "Vous avez réclamé votre récompense quotidienne de {{dailyReward}} pièces !",
+  "fed_pet": "Vous avez nourri votre animal avec {{itemName}}. La faim est maintenant de {{hunger}} et la santé est de {{health}}.",
+  "played_with_pet": "Vous avez joué avec {{petName}}. Le bonheur est maintenant de {{happiness}}.",
+  "shop": {
+    "food": {
+      "premium_food": "Nourriture premium",
+      "dry_kibble": "Croquettes sèches",
+      "wet_food": "Nourriture humide",
+      "treats": "Friandises",
+      "raw_meat": "Viande crue",
+      "fish": "Poisson",
+      "chicken": "Poulet",
+      "beef": "Bœuf",
+      "lamb": "Agneau",
+      "turkey": "Dinde",
+      "duck": "Canard",
+      "rabbit": "Viande de lapin",
+      "grain_free_food": "Nourriture sans grains",
+      "organic_food": "Nourriture biologique"
+    },
+    "medicine": {
+      "vitamins": "Vitamines",
+      "antibiotics": "Antibiotiques",
+      "painkillers": "Analgésiques",
+      "bandages": "Pansements",
+      "antiseptic": "Antiseptique",
+      "eye_drops": "Gouttes pour les yeux",
+      "ear_drops": "Gouttes pour les oreilles",
+      "cough_syrup": "Sirop contre la toux",
+      "allergy_pills": "Pilules contre les allergies",
+      "digestive_aid": "Aide digestive",
+      "skin_ointment": "Pommade pour la peau",
+      "anti_inflammatory": "Anti-inflammatoire",
+      "hydration_pack": "Trousse d'hydratation",
+      "energy_boost": "Boost d'énergie",
+      "spa_treatment": "Soin au spa",
+      "vet_visit": "Visite vétérinaire"
+    },
+    "toy": {
+      "ball": "Balle",
+      "frisbee": "Frisbee",
+      "chew_toy": "Jouet à mâcher",
+      "squeaky_toy": "Jouet sonore",
+      "rope_toy": "Corde à jouer",
+      "plush_toy": "Peluche",
+      "puzzle_toy": "Jouet casse-tête",
+      "tug_toy": "Jouet de tir à la corde",
+      "interactive_laser": "Pointeur laser",
+      "catnip": "Herbe à chat",
+      "feather_wand": "Baguette à plumes",
+      "tunnel_toy": "Tunnel",
+      "climbing_tree": "Arbre à grimper",
+      "scratching_post": "Poteau à griffer"
+    }
+  }
+}
