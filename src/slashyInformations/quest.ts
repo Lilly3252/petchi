@@ -1,7 +1,7 @@
 import { ApplicationCommandOptionType } from 'discord-api-types/v10';
 
-export const questCommand = { // pingCommand / banCommand / settingCommand ... 
-  name: "quest",
+export const questCommand = { 
+      name:"quest",
       description: "Start a quest",
       description_localizations: {
         fr: "Commencer une quête",

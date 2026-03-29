@@ -35,6 +35,8 @@
     "discord.js": "^14.25.1",
     "i18next": "^25.10.9",
     "mongoose": "^9.3.3",
+    "readdirp": "^5.0.0",
+    "reflect-metadata": "^0.2.2",
     "tsyringe": "^4.10.0"
   },
   "devDependencies": {

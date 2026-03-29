@@ -2,7 +2,6 @@ import process from "node:process";
 import * as command from "#slashyInformations/index.js"
 import { Routes } from "discord-api-types/v10";
 import { REST } from "@discordjs/rest";
-
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN!);
 try {
   console.log("Start refreshing interaction (/) commands.");
@@ -17,6 +16,7 @@ try {
       command.feedCommand,
       command.playCommand,
       command.questCommand,
+      command.statusCommand,
       command.trainCommand,
     ],
   });

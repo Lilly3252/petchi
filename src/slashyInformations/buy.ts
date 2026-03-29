@@ -1,4 +1,5 @@
 
+
 import { generateLocalizedChoices } from "#utils/builders/choices.js";
 import { FoodType } from "#utils/enums/foodType.js";
 import { MedicineType } from "#utils/enums/medecineType.js";

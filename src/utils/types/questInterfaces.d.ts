@@ -1,18 +1,18 @@
 export interface Quest {
-  questName: string;      
-  description: string;    
+  questName: string;       // Display name (i18next )
+  description: string;     // Description (i18next )
   reward: string;
-  expiryDate?: Date;       
+  expiryDate?: Date;       // Optional
   progress?: number;       // 0-100
   completed: boolean;
 }
-
+// Internal config for your bot
 export interface QuestConfig {
-  nameKey: string;              
-  descriptionKey: string;      
+  nameKey: string;              // i18next key
+  descriptionKey: string;       // i18next key for description
   reward: string;
-  expiryDate?: Date;            
-  expiryMs?: number;           
+  expiryDate?: Date;            // Fixed expiry
+  expiryMs?: number;            // Or relative expiry in milliseconds
   progress?: number;            // Default 0
-  completed: boolean;          
+  completed: boolean;          // Default false
 }

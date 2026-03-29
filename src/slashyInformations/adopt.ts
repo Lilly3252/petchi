@@ -1,6 +1,9 @@
-import {generateLocalizedChoices } from "#utils/builders/choices.js";
+
+import { generateLocalizedChoices } from "#utils/builders/choices.js";
 import { availablePetsType } from "#utils/enums/animalType.js";
 import { ApplicationCommandOptionType } from "discord-api-types/v10";
+
+
 
 export const adoptCommand = {
   name: "adopt",

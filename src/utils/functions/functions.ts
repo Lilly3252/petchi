@@ -1,6 +1,7 @@
 import user from "#database/users.js";
 import { PERSONALITY_CONFIG, PersonalityType } from "#utils/config/personality.config.js";
 import { QUEST_CONFIG } from "#utils/config/quest.config.js";
+import { petSkills } from "#utils/enums/skillsType.js";
 import { Pet } from "#utils/types/mainTypes.js";
 import { Quest } from "#utils/types/questInterfaces.js";
 import { InteractionParam } from "@yuudachi/framework/types";
@@ -51,7 +52,9 @@ export function getLanguage(interaction: Interaction, defaultLanguage: string | 
   }
 }
 
-
+export function isPetSkill(value: string): value is petSkills {
+  return Object.values(petSkills).includes(value as petSkills);
+}
 export async function permission(
   interaction: InteractionParam,
   permission: PermissionResolvable,
@@ -89,14 +92,17 @@ export function generateQuestObjects(locale: string): Quest[] {
     completed: config.completed ?? false,
   }));
 }
-export function getPetCondition(pet: any) {
-  if (pet.health <= 0) return "💀 Critical";
-  if (pet.hunger < 20) return "🍽️ Starving";
-  if (pet.happiness < 20) return "😢 Sad";
-  if (pet.hunger > 80 && pet.happiness > 80) return "😄 Happy";
-
-  return "🙂 Okay";
-}
+  // Pet condition based on health, hunger, happiness
+   export  function getPetCondition(pet: {
+      health: number;
+      hunger: number;
+      happiness: number;
+    }): string {
+      if (pet.health < 30) return "⚠️ Critical";
+      if (pet.hunger < 30) return "🍽️ Hungry";
+      if (pet.happiness < 30) return "😔 Sad";
+      return "✅ Good";
+    }
 export function getPersonalityConfig(pet: Pet) {
   const personality: PersonalityType = pet.personality ?? "neutral";
   return PERSONALITY_CONFIG[personality];
@@ -131,3 +137,23 @@ export function applyDecay(pet: Pet):void {
   pet.lastPlayed = new Date();
 }
 
+export function tSkill(skill: petSkills, locale: string) {
+  return i18next.t(`skills.${skill}`, { lng: locale });
+}
+
+    // Progress bar helper
+    export function createBar(value: number, max = 100, size = 10): string {
+      const filled = Math.round((value / max) * size);
+      const empty = size - filled;
+      return "🟩".repeat(filled) + "⬜".repeat(empty);
+    }
+
+    // Mood emoji based on happiness
+    export function getMoodEmoji(happiness: number): string {
+      if (happiness > 80) return "😄";
+      if (happiness > 50) return "🙂";
+      if (happiness > 20) return "😐";
+      return "😢";
+    }
+
+  

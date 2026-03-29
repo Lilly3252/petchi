@@ -1,5 +1,7 @@
+import { PersonalityType } from "#utils/config/personality.config.js";
 import { FoodType } from "#utils/enums/foodType.js";
 import { MedicineType } from "#utils/enums/medecineType.js";
+import { petSkills } from "#utils/enums/skillsType.js";
 import { ToyType } from "#utils/enums/toyType.js";
 import { Snowflake } from "discord.js";
 import { Document, Types } from "mongoose";
@@ -18,8 +20,8 @@ export interface user {
     lastPlayed: Date;
     level: number;
     experience: number;
-    skills: string[];
-    skillXP?: Record<string, number>;
+    skills: petSkills[];
+    skillXP?: Record<petSkills, number>;
     personality?: PersonalityType;
     inventory: {
       medicine: Array<{

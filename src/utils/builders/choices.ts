@@ -1,5 +1,6 @@
+import { initI18n } from "#utils/i18n.js";
 import i18next from "i18next";
-
+await initI18n()
 export function generateLocalizedChoices<T extends Record<string, string>>(
   enumObj: T,
   i18nKey: string,
